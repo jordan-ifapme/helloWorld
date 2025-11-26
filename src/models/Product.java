@@ -1,6 +1,6 @@
 package models;
 
-import java.text.DateFormat;
+import java.util.Date;
 
 public class Product {
     private String name;
@@ -8,9 +8,9 @@ public class Product {
     private boolean inStock;
     private int discountPercentage;
     public static int globalStockQuantity = 0;
-    private static final DateFormat datecreationproduit;
+    private Date datecreationproduit;
 
-    public Product(String name, double price, boolean inStock, int discountPercentage, DateFormat datecreationproduit) {
+    public Product(String name, double price, boolean inStock, int discountPercentage, Date datecreationproduit) {
         this.name = name;
         this.price = price;
         this.inStock = inStock;
@@ -50,5 +50,13 @@ public class Product {
 
     public void setDiscountPercentage(int discountPercentage) {
         this.discountPercentage = discountPercentage;
+    }
+
+    public static int getGlobalStockQuantity() {
+        return globalStockQuantity;
+    }
+
+    public Date getDatecreationproduit() {
+        return datecreationproduit;
     }
 }
