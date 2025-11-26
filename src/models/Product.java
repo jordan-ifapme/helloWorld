@@ -1,6 +1,27 @@
 package models;
 
+public class // Product.java
+import java.time.LocalDateTime;
+
 public class Product {
+    private LocalDateTime DateDeCreation;
+
+    public Product() {
+        this.DateDeCreation = LocalDateTime.now();
+    }
+
+    public Product(LocalDateTime DateDeCreation) {
+        this.DateDeCreation = DateDeCreation;
+    }
+
+    public LocalDateTime getDateDeCreation() {
+        return DateDeCreation;
+    }
+
+    public void setDateDeCreation(LocalDateTime DateDeCreation) {
+        this.DateDeCreation = DateDeCreation;
+    }
+}Product {
     private String name;
     private double price;
     private boolean inStock;
