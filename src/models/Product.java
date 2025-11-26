@@ -1,11 +1,14 @@
 package models;
 
+import java.util.Date;
+
 public class Product {
     private String name;
     private double price;
     private boolean inStock;
     private int discountPercentage;
     public static int globalStockQuantity = 0;
+    public Date dateproduct;
 
     public Product(String name, double price, boolean inStock, int discountPercentage) {
         this.name = name;
@@ -13,6 +16,7 @@ public class Product {
         this.inStock = inStock;
         this.discountPercentage = discountPercentage;
         if (inStock) Product.globalStockQuantity ++;
+        this.dateproduct = new Date();
     }
 
     public String getName() {
@@ -43,7 +47,13 @@ public class Product {
         return discountPercentage;
     }
 
-    public void setDiscountPercentage(int discountPercentage) {
-        this.discountPercentage = discountPercentage;
+    public void setDiscountPercentage(int discountPercentage) {this.discountPercentage = discountPercentage;}
+
+    public Date getDateproduct() {
+        return dateproduct;
+    }
+
+    public void setDateproduct(Date dateproduct) {
+        this.dateproduct = dateproduct;
     }
 }
