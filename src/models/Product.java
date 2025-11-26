@@ -2,7 +2,6 @@ package models;
 
 public class Product {
     private String name;
-    // jb branch
     private double price;
     private boolean inStock;
     private int discountPercentage;
