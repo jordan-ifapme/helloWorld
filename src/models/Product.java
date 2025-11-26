@@ -11,7 +11,7 @@ public class Product {
     public static int globalStockQuantity = 0;
     public LocalDateTime dateCreateProduct;
 
-    public Product(String name, double price, boolean inStock, int discountPercentage,  LocalDateTime dateCreateProduct) {
+    public Product(String name, double price, boolean inStock, int discountPercentage) {
         this.name = name;
         this.price = price;
         this.inStock = inStock;
@@ -54,9 +54,5 @@ public class Product {
 
     public LocalDateTime getDateCreateProduct() {
         return dateCreateProduct;
-    }
-
-    public void setDateCreateProduct(LocalDateTime dateCreateProduct) {
-        this.dateCreateProduct = dateCreateProduct;
     }
 }
