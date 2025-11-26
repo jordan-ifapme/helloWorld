@@ -1,6 +1,7 @@
 package models;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Product {
     private String name;
@@ -16,7 +17,7 @@ public class Product {
         this.inStock = inStock;
         this.discountPercentage = discountPercentage;
         if (inStock) Product.globalStockQuantity ++;
-        this.dateCreateProduct = dateCreateProduct;
+        this.dateCreateProduct = LocalDateTime.now();
     }
 
     public String getName() {
