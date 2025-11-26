@@ -1,23 +1,18 @@
 package models;
 
-import java.text.DateFormat;
-
 public class Product {
     private String name;
     private double price;
     private boolean inStock;
     private int discountPercentage;
     public static int globalStockQuantity = 0;
-    private static final DateFormat datecreationproduit;
 
-    public Product(String name, double price, boolean inStock, int discountPercentage, DateFormat datecreationproduit) {
+    public Product(String name, double price, boolean inStock, int discountPercentage) {
         this.name = name;
         this.price = price;
         this.inStock = inStock;
         this.discountPercentage = discountPercentage;
-        if (inStock)
-            Product.globalStockQuantity++;
-        this.datecreationproduit = datecreationproduit;
+        if (inStock) Product.globalStockQuantity ++;
     }
 
     public String getName() {
