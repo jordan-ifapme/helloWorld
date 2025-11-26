@@ -1,18 +1,17 @@
 package models;
 
 public class Test {
+  private String test;
 
-  private int test;
-
-  public Test(int test) {
+  public Test(String test) {
     this.test = test;
   }
 
-  public int getTest() {
+  public String getTest() {
     return test;
   }
 
-  public void setTest(int test) {
+  public void setTest(String test) {
     this.test = test;
   }
 }
