@@ -1,18 +1,23 @@
 package models;
 
+import java.util.Date;
+
 public class Product {
     private String name;
     private double price;
     private boolean inStock;
     private int discountPercentage;
     public static int globalStockQuantity = 0;
+    private Date datecreationproduit;
 
-    public Product(String name, double price, boolean inStock, int discountPercentage) {
+    public Product(String name, double price, boolean inStock, int discountPercentage, Date datecreationproduit) {
         this.name = name;
         this.price = price;
         this.inStock = inStock;
         this.discountPercentage = discountPercentage;
-        if (inStock) Product.globalStockQuantity ++;
+        if (inStock)
+            Product.globalStockQuantity++;
+        this.datecreationproduit = datecreationproduit;
     }
 
     public String getName() {
@@ -45,5 +50,13 @@ public class Product {
 
     public void setDiscountPercentage(int discountPercentage) {
         this.discountPercentage = discountPercentage;
+    }
+
+    public static int getGlobalStockQuantity() {
+        return globalStockQuantity;
+    }
+
+    public Date getDatecreationproduit() {
+        return datecreationproduit;
     }
 }
