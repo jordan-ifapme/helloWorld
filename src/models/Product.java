@@ -52,8 +52,4 @@ public class Product {
     public Date getDateproduct() {
         return dateproduct;
     }
-
-    public void setDateproduct(Date dateproduct) {
-        this.dateproduct = dateproduct;
-    }
 }
